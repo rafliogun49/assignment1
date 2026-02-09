@@ -19,3 +19,24 @@ A RESTful API built with FastAPI, SQLModel, and Alembic for managing a book libr
 - **SQLite** - Lightweight database
 - **Pydantic** - Data validation
 - **Uvicorn** - ASGI server
+
+## Installation
+Clone the repository
+
+Bash
+git clone [https://github.com/rafliogun49/assignment1.git](https://github.com/rafliogun49/assignment1.git)
+cd assignment1
+Create virtual environment and install dependencies
+
+Bash
+uv venv
+uv sync --active
+Run database migrations
+
+Bash
+uv run alembic upgrade head
+
+## Running the Server
+Bash
+uv run uvicorn app.main:app --reload
+The API will be available at http://localhost:8000
